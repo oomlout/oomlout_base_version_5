@@ -1,0 +1,13 @@
+# base ones
+# media
+oomlout_media:
+  name: oomlout_media
+
+oomlout_base_version_5:
+  name: oomlout_base_version_5
+
+oomlout_oobb_version_5:
+  name: oomlout_oobb_version_5
+
+oomlout_oomp_version_5:
+  name: oomlout_oomp_version_5
