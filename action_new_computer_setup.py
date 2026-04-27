@@ -1,5 +1,6 @@
 import os
 import copy
+import subprocess
 
 ### to look into adding github cli
 #winget install --id GitHub.cli
@@ -16,9 +17,9 @@ def main(**kwargs):
     
     git_long_directory = False
     pip = False
-    path = False
+    #path = False
     pythonpath = False
-    #clone = False
+    clone = False
     
     if git_long_directory: 
         print("doing all the git stuff")
@@ -36,7 +37,8 @@ def main(**kwargs):
     if path:
         print("doing all the path stuff")
         folder_path = []
-        folder_path.append("c:\\gh\\oomlout_base_version_5") 
+        folder_path.append("c:\\gh\\oomlout_base_version_5")
+        folder_path.append("c:\\gh\\oomlout_base_version_5\\path") 
         #db path
         folder_path.append("c:\\od\\OneDrive\\path") 
         #oobb
@@ -143,37 +145,70 @@ def set_folder_generic(**kwargs):
     print("action_new_computer_setup.py set_folder_path()")
     folder_path = kwargs["folder_path"]
     environment_variable = kwargs.get("environment_variable", "PATH")    
-    #print("folder: ", folder)
-    #add folder to the path variable if it isn't already there using os.system it is windows
 
-    path_current = os.environ.get(environment_variable, None)
-    if path_current is None:
-        os.environ[environment_variable] = ""
-        path_current = os.environ[environment_variable]
+    path_current = get_user_environment_variable(environment_variable)
+    new_path = split_environment_paths(path_current)
 
-    new_path = f'{path_current}'
-    #split new path with ; and remove duplicates            
-    new_path = new_path.split(";")
-    new_path = list(set(new_path))
-    #remove "" entries
-    new_path = [x for x in new_path if x != ""]            
     for folder in folder_path:
         folder = folder.replace("/", "\\")
-        # if fiolder not in any of new_path.lower()
-        if not any(folder.lower() in s.lower() for s in new_path):
+        if not path_entry_exists(folder, new_path):
             new_path.append(folder)
+            set_user_environment_variable(environment_variable, new_path)
+            print(f"added {folder} to {environment_variable}")
+        else:
+            print(f"skipping {folder}, already in {environment_variable}")
 
-    new_path = ";".join(new_path)
-    new_path = new_path.replace("/", "\\")
-    command = f'setx {environment_variable} "{new_path}"'
-    os.system(command)
-    # echo path using os.system
-    #os.system(f'echo %PATH%')
+    os.environ[environment_variable] = ";".join(new_path)
 
 
-    #print out the current path variable
-    #path_current = os.environ['PATH']
-    #print("path_current: ", path_current)
+def split_environment_paths(path_value):
+    if path_value is None:
+        return []
+
+    paths = []
+    for path in path_value.split(";"):
+        path = path.strip().replace("/", "\\")
+        if path and not path_entry_exists(path, paths):
+            paths.append(path)
+    return paths
+
+
+def path_entry_exists(folder, paths):
+    folder = normalize_path_entry(folder)
+    return any(folder == normalize_path_entry(path) for path in paths)
+
+
+def normalize_path_entry(path):
+    return path.strip().strip('"').replace("/", "\\").rstrip("\\").lower()
+
+
+def get_user_environment_variable(environment_variable):
+    command = [
+        "powershell",
+        "-NoProfile",
+        "-Command",
+        f"[Environment]::GetEnvironmentVariable('{environment_variable}', 'User')",
+    ]
+    result = subprocess.run(command, capture_output=True, text=True, check=False)
+    return result.stdout.strip()
+
+
+def set_user_environment_variable(environment_variable, paths):
+    path_value = ";".join(paths).replace("/", "\\")
+    command = [
+        "powershell",
+        "-NoProfile",
+        "-Command",
+        (
+            f"[Environment]::SetEnvironmentVariable("
+            f"'{environment_variable}', "
+            f"$env:OOMLOUT_ENVIRONMENT_VALUE, "
+            f"'User')"
+        ),
+    ]
+    env = os.environ.copy()
+    env["OOMLOUT_ENVIRONMENT_VALUE"] = path_value
+    subprocess.run(command, env=env, check=True)
 
 
 if __name__ == '__main__':
