@@ -11,3 +11,6 @@ oomlout_oobb_version_5:
 
 oomlout_oomp_version_5:
   name: oomlout_oomp_version_5
+  
+oomlout_roboclick:
+  name: oomlout_roboclick
