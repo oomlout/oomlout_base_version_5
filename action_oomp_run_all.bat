@@ -3,7 +3,7 @@ setlocal EnableExtensions
 set "ROOT_DIR=%~dp0"
 set "LOG_FILE=%~dp0action_oomp_run_all_errors.log"
 if exist "%LOG_FILE%" del "%LOG_FILE%"
-echo Running action_make_all.py for configured part sources.
+echo Running action_make_action.py for configured part sources.
 echo Logging errors to %LOG_FILE%.
 echo.
 
@@ -36,18 +36,18 @@ if not exist "%TARGET_DIR%" (
     echo Missing directory, skipping.
     exit /b 0
 )
-if not exist "%TARGET_DIR%\action_make_all.py" (
-    echo [missing_script] %TARGET_DIR%\action_make_all.py>>"%LOG_FILE%"
-    echo action_make_all.py not found, skipping.
+if not exist "%TARGET_DIR%\action_make_action.py" (
+    echo [missing_script] %TARGET_DIR%\action_make_action.py>>"%LOG_FILE%"
+    echo action_make_action.py not found, skipping.
     exit /b 0
 )
 pushd "%TARGET_DIR%" >nul
-"C:\Users\aaron\AppData\Local\Programs\Python\Python312\python.exe" action_make_all.py
+"C:\Users\aaron\AppData\Local\Programs\Python\Python312\python.exe" action_make_action.py
 set "RUN_ERROR=%ERRORLEVEL%"
 popd >nul
 if not "%RUN_ERROR%"=="0" (
     echo [error %RUN_ERROR%] %TARGET_DIR%>>"%LOG_FILE%"
-    echo action_make_all.py failed with exit code %RUN_ERROR%.
+    echo action_make_action.py failed with exit code %RUN_ERROR%.
     exit /b 0
 )
 echo Completed successfully.
