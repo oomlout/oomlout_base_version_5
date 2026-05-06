@@ -19,8 +19,11 @@ PROJECT_UPDATE_ITEMS = {
         "type": "file",
         "always_include": True,
     },
-    
     "action_*.bat": {
+        "type": "file",
+        "always_include": True,
+    },
+    "action_*.py": {
         "type": "file",
         "always_include": True,
     },
@@ -74,10 +77,10 @@ def collect_folder_files(src_folder: Path) -> List[Tuple[Path, Path]]:
             file_list.append((path, rel))
     return file_list
 
-def collect_file_matches(pattern: str) -> List[Path]:
-    """Return all files in the project base matching a literal name or glob pattern."""
+def collect_file_matches(pattern: str, source_base: Path) -> List[Path]:
+    """Return all files in the source base matching a literal name or glob pattern."""
     return sorted(
-        [path for path in PROJECT_BASE_PATH.glob(pattern) if path.is_file()],
+        [path for path in source_base.glob(pattern) if path.is_file()],
         key=lambda path: str(path).lower(),
     )
 
@@ -145,8 +148,9 @@ def build_copy_actions(target_dirs: List[Path]) -> List[Tuple[Path, List[Dict[st
         actions = []
         for name, opts in PROJECT_UPDATE_ITEMS.items():
             dst = target_dir / name
+            source_base = Path(opts.get("source_base", PROJECT_BASE_PATH))
             if opts["type"] == "file":
-                for src in collect_file_matches(name):
+                for src in collect_file_matches(name, source_base):
                     dst = target_dir / src.name
                     if files_are_different(src, dst):
                         actions.append(
@@ -158,7 +162,7 @@ def build_copy_actions(target_dirs: List[Path]) -> List[Tuple[Path, List[Dict[st
                             }
                         )
             elif opts["type"] == "folder":
-                src = PROJECT_BASE_PATH / name
+                src = source_base / name
                 if src.exists() and src.is_dir():
                     exclude = opts.get("exclude", [])
                     for file_src, rel in collect_folder_files(src):
