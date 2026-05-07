@@ -9,8 +9,6 @@ echo.
 
 call :run_repo "C:\od\OneDrive\docs\oomp_base\parts"
 
-call :run_repo "C:\od\OneDrive\docs\household_document_base"
-
 call :run_repo "C:\od\OneDrive\docs\oomp_furniture"
 
 call :run_repo "C:\od\OneDrive\docs\oomp_tool"
@@ -18,6 +16,8 @@ call :run_repo "C:\od\OneDrive\docs\oomp_tool"
 call :run_repo "C:\od\OneDrive\docs\oomp_paper"
 
 call :run_repo "C:\od\OneDrive\docs\warehouse_storage_tote"
+
+call :run_repo "C:\od\OneDrive\docs\household_document_base"
 
 call :run_repo "C:\gh\oomp_paper_sheet"
 
