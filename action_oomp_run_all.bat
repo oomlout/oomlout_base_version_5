@@ -19,7 +19,7 @@ call :run_repo "C:\od\OneDrive\docs\warehouse_storage_tote"
 
 call :run_repo "C:\od\OneDrive\docs\household_document_base"
 
-call :run_repo "c:\gh\project_base"
+call :run_repo "C:\gh\project_base"
 
 call :run_repo "C:\gh\oomp_paper_sheet"
 
