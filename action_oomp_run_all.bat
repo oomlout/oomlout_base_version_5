@@ -9,6 +9,8 @@ echo.
 
 call :run_repo "C:\od\OneDrive\docs\oomp_base\parts"
 
+call :run_repo "C:\od\OneDrive\docs\computer_base"
+
 call :run_repo "C:\od\OneDrive\docs\oomp_furniture"
 
 call :run_repo "C:\od\OneDrive\docs\oomp_tool"
