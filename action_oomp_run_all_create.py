@@ -6,7 +6,7 @@ import sys
 import yaml
 
 
-CONFIG_PATH = Path(r"C:\od\OneDrive\docs\oomp_base\webserver\config_part_source.yaml")
+CONFIG_PATH = Path(r"C:\od\OneDrive\docs\oomp_base\config_part_source.yaml")
 CONFIG_BASE_DIRECTORY = CONFIG_PATH.parent.parent
 OUTPUT_PATH = Path(__file__).with_name("action_oomp_run_all.bat")
 LOG_FILE_NAME = "action_oomp_run_all_errors.log"

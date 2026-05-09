@@ -7,7 +7,7 @@ echo Running action_make_action_only.py for configured part sources.
 echo Logging errors to %LOG_FILE%.
 echo.
 
-call :run_repo "C:\od\OneDrive\docs\oomp_base\parts"
+call :run_repo "C:\od\OneDrive\docs\parts"
 
 call :run_repo "C:\od\OneDrive\docs\computer_base"
 
