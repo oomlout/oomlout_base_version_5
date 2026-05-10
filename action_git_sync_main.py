@@ -10,6 +10,8 @@ REPOSITORIES = [
     "oomlout_oobb_version_5",
     "oomlout_oomp_version_5",
     "oomlout_roboclick",
+    "oomp_paper_sheet",    
+    "oomp_hardware_screw_version_5",    
 ]
 
 
