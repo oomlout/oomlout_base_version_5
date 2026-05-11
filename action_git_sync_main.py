@@ -12,6 +12,7 @@ REPOSITORIES = [
     "oomlout_roboclick",
     "oomp_paper_sheet",    
     "oomp_hardware_screw_version_5",    
+    "oomp_hardware_bolt_version_5",    
 ]
 
 
