@@ -7,8 +7,6 @@ echo Running action_make_action_only.py for configured part sources.
 echo Logging errors to %LOG_FILE%.
 echo.
 
-call :run_repo "C:\gh\oomp_hardware_screw_version_5"
-
 call :run_repo "C:\od\OneDrive\docs\parts"
 
 call :run_repo "C:\od\OneDrive\docs\computer_base"
@@ -27,6 +25,7 @@ call :run_repo "C:\gh\project_base"
 
 call :run_repo "C:\gh\oomp_paper_sheet"
 
+call :run_repo "C:\gh\oomp_hardware_screw_version_5"
 
 call :run_repo "C:\gh\oomp_electrical_extension_lead_uk_socket_6_outlet_pro_elec_2068_version_5"
 
