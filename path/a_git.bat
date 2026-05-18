@@ -1,1 +1,1 @@
-call action_git_sync_main.py
+call action_git_sync_main.bat

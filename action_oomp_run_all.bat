@@ -15,6 +15,10 @@ call :run_repo "C:\od\OneDrive\docs\oomp_furniture"
 
 call :run_repo "C:\od\OneDrive\docs\oomp_tool"
 
+call :run_repo "C:\od\OneDrive\docs\project_bolt_packaging"
+
+call :run_repo "C:\od\OneDrive\docs\project_bolt_base"
+
 call :run_repo "C:\od\OneDrive\docs\oomp_packaging"
 
 call :run_repo "C:\od\OneDrive\docs\phone_base"
@@ -22,6 +26,8 @@ call :run_repo "C:\od\OneDrive\docs\phone_base"
 call :run_repo "C:\od\OneDrive\docs\warehouse_storage_tote"
 
 call :run_repo "C:\od\OneDrive\docs\household_document_base"
+
+call :run_repo "C:\od\OneDrive\docs\project_bolt_packaging"
 
 call :run_repo "C:\gh\project_base"
 
