@@ -9,6 +9,14 @@ echo.
 
 call :run_repo "C:\od\OneDrive\docs\parts"
 
+call :run_repo "C:\od\OneDrive\docs\warehouse_storage_tote"
+
+call :run_repo "C:\od\OneDrive\docs\warehouse_storage_tote_category"
+
+call :run_repo "C:\od\OneDrive\docs\household_archive_base"
+
+call :run_repo "C:\od\OneDrive\docs\food_base"
+
 call :run_repo "C:\od\OneDrive\docs\computer_base"
 
 call :run_repo "C:\od\OneDrive\docs\oomp_furniture"
@@ -23,9 +31,9 @@ call :run_repo "C:\od\OneDrive\docs\oomp_packaging"
 
 call :run_repo "C:\od\OneDrive\docs\phone_base"
 
-call :run_repo "C:\od\OneDrive\docs\warehouse_storage_tote"
-
 call :run_repo "C:\od\OneDrive\docs\household_document_base"
+
+call :run_repo "C:\od\OneDrive\docs\oomlout_document_base"
 
 call :run_repo "C:\od\OneDrive\docs\project_bolt_packaging"
 
@@ -36,6 +44,10 @@ call :run_repo "C:\gh\oomp_paper_sheet"
 call :run_repo "C:\gh\oomp_hardware_screw_version_5"
 
 call :run_repo "C:\gh\oomp_hardware_bolt_version_5"
+
+call :run_repo "C:\od\OneDrive\docs\oomp_bearing"
+
+call :run_repo "C:\od\OneDrive\docs\oomp_mechanical_coupler"
 
 call :run_repo "C:\gh\oomp_electrical_extension_lead_uk_socket_6_outlet_pro_elec_2068_version_5"
 
