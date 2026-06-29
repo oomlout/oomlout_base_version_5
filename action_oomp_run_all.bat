@@ -15,6 +15,8 @@ call :run_repo "C:\od\OneDrive\docs\warehouse_storage_tote_category"
 
 call :run_repo "C:\od\OneDrive\docs\household_archive_base"
 
+call :run_repo "C:\gh\oomlout_oobb_gear_version_5"
+
 call :run_repo "C:\od\OneDrive\docs\food_base"
 
 call :run_repo "C:\od\OneDrive\docs\computer_base"
@@ -48,6 +50,8 @@ call :run_repo "C:\gh\oomp_hardware_bolt_version_5"
 call :run_repo "C:\od\OneDrive\docs\oomp_bearing"
 
 call :run_repo "C:\od\OneDrive\docs\oomp_mechanical_coupler"
+
+
 
 call :run_repo "C:\gh\oomp_electrical_extension_lead_uk_socket_6_outlet_pro_elec_2068_version_5"
 
