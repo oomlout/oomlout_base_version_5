@@ -11,8 +11,6 @@ call :run_repo "C:\od\OneDrive\docs\parts"
 
 call :run_repo "C:\od\OneDrive\docs\warehouse_storage_tote"
 
-call :run_repo "C:\od\OneDrive\docs\oomp_category"
-
 call :run_repo "C:\od\OneDrive\docs\warehouse_storage_tote_category"
 
 call :run_repo "C:\od\OneDrive\docs\household_archive_base"
@@ -21,15 +19,33 @@ call :run_repo "C:\od\OneDrive\docs\food_base"
 
 call :run_repo "C:\od\OneDrive\docs\computer_base"
 
+call :run_repo "C:\od\OneDrive\docs\oomp_bearing"
+
+call :run_repo "C:\od\OneDrive\docs\oomp_category"
+
+call :run_repo "C:\od\OneDrive\docs\oomp_electronic"
+
 call :run_repo "C:\od\OneDrive\docs\oomp_furniture"
 
+call :run_repo "C:\od\OneDrive\docs\oomp_motor"
+
 call :run_repo "C:\od\OneDrive\docs\oomp_tool"
+
+call :run_repo "C:\od\OneDrive\docs\oomp_packaging"
+
+call :run_repo "C:\gh\oomp_electronic_version_5"
+
+call :run_repo "C:\gh\oomp_hardware_screw_version_5"
+
+call :run_repo "C:\gh\oomp_hardware_bolt_version_5"
+
+call :run_repo "C:\gh\oomp_paper_sheet"
 
 call :run_repo "C:\od\OneDrive\docs\project_bolt_packaging"
 
 call :run_repo "C:\od\OneDrive\docs\project_bolt_base"
 
-call :run_repo "C:\od\OneDrive\docs\oomp_packaging"
+call :run_repo "C:\od\OneDrive\docs\oomp_storage_jar_clip_top"
 
 call :run_repo "C:\od\OneDrive\docs\phone_base"
 
@@ -41,19 +57,13 @@ call :run_repo "C:\od\OneDrive\docs\project_bolt_packaging"
 
 call :run_repo "C:\gh\project_base"
 
-call :run_repo "C:\gh\oomp_paper_sheet"
-
 call :run_repo "C:\gh\oomlout_oobb_gear_version_5"
 
 call :run_repo "C:\gh\oomlout_oobb_part_plate_version_5"
 
 call :run_repo "C:\gh\oomlout_oobb_part_plate_l_version_5"
 
-call :run_repo "C:\gh\oomp_hardware_screw_version_5"
-
-call :run_repo "C:\gh\oomp_hardware_bolt_version_5"
-
-call :run_repo "C:\od\OneDrive\docs\oomp_bearing"
+call :run_repo "C:\od\OneDrive\docs\megacity_mascot"
 
 call :run_repo "C:\od\OneDrive\docs\oomp_mechanical_coupler"
 
