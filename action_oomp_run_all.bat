@@ -67,6 +67,8 @@ call :run_repo "C:\od\OneDrive\docs\megacity_mascot"
 
 call :run_repo "C:\od\OneDrive\docs\oomp_mechanical_coupler"
 
+call :run_repo "C:\od\OneDrive\docs\corner_shop_base"
+
 call :run_repo "C:\gh\oomp_electrical_extension_lead_uk_socket_6_outlet_pro_elec_2068_version_5"
 
 echo.
