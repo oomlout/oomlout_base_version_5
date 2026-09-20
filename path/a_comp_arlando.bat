@@ -1,11 +1,23 @@
-start python C:\gh\oomlout_base_webserver_flask_template_oomp\working_web_oomp.py 
-start python C:\od\OneDrive\docs\ai_image_trace_server\run_server.bat
+
+
+REM trace server
+start python "C:\od\OneDrive\docs\ai_image_trace_server\run_server.bat"
+
+REM start printer_webserver
+start Python "C:\od\OneDrive\docs\printer_webserver\app.py"
+
+
+REM OLD OLD OLD OLD OLD OLD
+
+REM start python C:\gh\oomlout_base_webserver_flask_template_oomp\working_web_oomp.py 
 
 REM ollama section
 
 REM start a_comp_arlando_ollama.bat
 
 REM start a_comp_arlando_webui.bat
+
+
 
 REM start open-webui serve
 REM start powershell -NoExit -Command "cd 'C:\od\OneDrive\docs\ai_agent_claude_code_local\test_app_1\glm-4.7-flashq4_K_M'; ollama launch claude --model glm-4.7-flash:q4_K_M -- --dangerously-skip-permissions"
