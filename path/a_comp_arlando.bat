@@ -13,7 +13,7 @@ REM lego identifier
 start C:\od\OneDrive\docs\oomp_lego_part_identification_base\start.bat
 
 REM lego erp
-start python C:\od\OneDrive\docs\oomp_lego_erp_base\webserver\app.py
+start python C:\od\OneDrive\docs\oomp_lego_bricklink_store_erp\webserver\app.py
 
 REM OLD OLD OLD OLD OLD OLD
 
