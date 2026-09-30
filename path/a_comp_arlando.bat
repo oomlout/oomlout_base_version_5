@@ -1,11 +1,19 @@
 
 
 REM trace server
-start python "C:\od\OneDrive\docs\ai_image_trace_server\run_server.bat"
+start C:\od\OneDrive\docs\ai_image_trace_server\run_server.bat
 
 REM start printer_webserver
 start Python "C:\od\OneDrive\docs\printer_webserver\app.py"
 
+REM start lego server
+start python "D:\oomp_lego\webserver\app.py"
+
+REM lego identifier
+start C:\od\OneDrive\docs\oomp_lego_part_identification_base\start.bat
+
+REM lego erp
+start python C:\od\OneDrive\docs\oomp_lego_erp_base\webserver\app.py
 
 REM OLD OLD OLD OLD OLD OLD
 
