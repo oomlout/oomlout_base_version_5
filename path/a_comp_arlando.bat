@@ -6,14 +6,23 @@ start C:\od\OneDrive\docs\ai_image_trace_server\run_server.bat
 REM start printer_webserver
 start Python "C:\od\OneDrive\docs\printer_webserver\app.py"
 
-REM start lego server
-start python "D:\oomp_lego\webserver\app.py"
-
-REM lego identifier
-start C:\od\OneDrive\docs\oomp_lego_part_identification_base\start.bat
-
 REM lego erp
 start python C:\od\OneDrive\docs\oomp_lego_bricklink_store_erp\webserver\app.py
+
+
+
+
+REM OLD OLD OLD OLD OLD
+
+REM start lego server
+REM start python "D:\oomp_lego\webserver\app.py"
+
+REM lego identifier
+REM start C:\od\OneDrive\docs\oomp_lego_part_identification_base\start.bat
+
+
+REM size classifier
+REM start C:\od\OneDrive\docs\oomp_lego_size_classifier\run.bat
 
 REM OLD OLD OLD OLD OLD OLD
 
@@ -34,7 +43,7 @@ REM start python "c:\od\OneDrive\docs\ai_llm_inference_ollama\proxy\app.py"
 REM start explorer "C:\od\OneDrive\docs\ai_llm_inference_ollama\proxy"
 
 REM launch open hardware monitor to keep an eye on GPU usage and then continue
-start "" "C:\Program Files (x86)\openhardwaremonitor\OpenHardwareMonitor.exe"
+REM start "" "C:\Program Files (x86)\openhardwaremonitor\OpenHardwareMonitor.exe"
 
 REM launch a cmd with ollama ps run once and leave it open to monitor the Ollama processes anmd then echo ommala ps after it is run
 REM start cmd /k "ollama ps & echo Ollama processes listed above. This window will remain open for monitoring. Close it when done."
